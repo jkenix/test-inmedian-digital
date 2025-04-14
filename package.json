@@ -7,6 +7,6 @@
     "sass": "^1.85.1"
   },
   "scripts": {
-    "scss": "sass --watch --no-source-map --style=compressed styles/_index.scss:sources/main.css"
+    "scss": "sass --watch --no-source-map --style=compressed sources/scss/_index.scss:sources/main.css"
   }
 }
