@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Тестовое задание для Inmedian Digital</title>
+        <meta
+            name="description"
+            content="Тестовое задание для Inmedian Digital, выполненное Дмитрием." />
+        <meta name="author" content="https://github.com/jkenix" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="icon"
+            type="image/png"
+            href="sources/favicon-96x96.png"
+            sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="sources/favicon.svg" />
+        <link rel="shortcut icon" href="sources/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="sources/apple-touch-icon.png" />
+        <link rel="manifest" href="sources/site.webmanifest.json" />
+        <link rel="stylesheet" href="sources/main.css" />
+    </head>
+
+    <body>
+        <div
+            class="wrapper"
+            style="background-image: url('sources/img/bg.png')">
+            <header class="header container-fluid">
+                <div class="container header__inner">
+                    <div class="header__content">
+                        <div class="header__languages">
+                            <div class="header__language-switcher">
+                                <img
+                                    src="sources/img/icons/ru_flag.svg"
+                                    width="162"
+                                    height="54"
+                                    alt="drc logo" />
+                            </div>
+                            <a href="#kz" class="header__language-switcher">
+                                <img
+                                    src="sources/img/icons/kz_flag.svg"
+                                    width="162"
+                                    height="54"
+                                    alt="drc logo" />
+                            </a>
+                            <a href="#europe" class="header__language-switcher">
+                                <img
+                                    src="sources/img/icons/eu_flag.svg"
+                                    width="162"
+                                    height="54"
+                                    alt="drc logo" />
+                            </a>
+                        </div>
+                        <div class="header__logo logo">
+                            <img
+                                src="sources/img/drc_logo.svg"
+                                width="162"
+                                height="54"
+                                alt="drc logo" />
+                        </div>
+                    </div>
+                    <nav class="header__menu">
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item">
+                                <a class="header__menu-link" href="#poezdki"
+                                    >Облачные решения</a
+                                >
+                            </li>
+                            <li class="header__menu-item">
+                                <a class="header__menu-link" href="#poezdki"
+                                    >Кибербезопасность</a
+                                >
+                            </li>
+                            <li class="header__menu-item">
+                                <a class="header__menu-link" href="#poezdki"
+                                    >Импортозамещение</a
+                                >
+                            </li>
+                            <li class="header__menu-item">
+                                <a class="header__menu-link" href="#poezdki"
+                                    >Цифровая трансформация</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <form
+                enctype="multipart/form-data"
+                method="post"
+                id="form"
+                onsubmit="submitForm(event)"
+                action="send.php">
+                <p>Имя</p>
+                <input placeholder="Представьтесь" name="name" type="text" />
+                <p><input value="Отправить" type="submit" /></p>
+            </form>
+        </div>
+
+        <script src="sources/js/scripts.js"></script>
+    </body>
+</html>

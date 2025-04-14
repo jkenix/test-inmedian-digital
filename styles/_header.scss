@@ -1,0 +1,98 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.header {
+    position: relative;
+
+    &__inner {
+        padding: 0px 28px;
+
+        @media (max-width: $md) {
+        }
+
+        @media (max-width: $sm) {
+        }
+    }
+
+    &__languages {
+        @include column;
+
+        background: rgb(206, 222, 243);
+
+        gap: 5px;
+        width: 45px;
+        align-items: center;
+        justify-content: center;
+
+        padding-top: 49px;
+        padding-bottom: 11px;
+    }
+
+    &__language-switcher {
+        display: flex;
+
+        width: 24px;
+        height: 18px;
+
+        img {
+            width: inherit;
+            height: inherit;
+        }
+    }
+
+    &__content {
+        display: flex;
+
+        row-gap: 20px;
+
+        @media (max-width: $md) {
+        }
+
+        @media (max-width: $sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__line-content {
+        height: 1px;
+        background-color: rgb(217, 217, 217);
+    }
+
+    &__menu-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 20px;
+
+        @media (max-width: $lg) {
+            gap: 15px;
+            justify-content: center;
+        }
+
+        @media (max-width: $md) {
+            justify-content: flex-start;
+        }
+
+        @media (max-width: $sm) {
+            row-gap: 0px;
+            column-gap: 10px;
+        }
+    }
+
+    &__menu-link {
+        color: $dark;
+
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 20px;
+
+        @media (max-width: $lg) {
+            font-size: 1rem;
+        }
+
+        @media (max-width: $sm) {
+            font-size: 0.875rem;
+            line-height: 16px;
+        }
+    }
+}
