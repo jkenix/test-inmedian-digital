@@ -8,22 +8,25 @@ $xxl: 1399.98px;
 // $hd: 1919.98px;
 
 // Fonts
-$main-font: "Proxima Nova Cn", Arial, sans-serif;
-$menu-font: "Proxima Nova", Arial, sans-serif;
+$main-font: "Montserrat", Arial, sans-serif;
 
 // Bg
 $body-bg-color: #ffffff;
 
 // Colors
-$dark: rgb(68, 68, 68);
+$blue: rgb(44, 113, 196);
+$dark: rgb(0, 0, 0);
+$dark-2: rgb(11, 23, 37);
+$dark-3: rgb(18, 18, 18);
 $white: rgb(255, 255, 255);
+$night: rgb(16, 35, 86);
+$night-2: rgb(29, 40, 87);
 $red: rgb(176, 23, 54);
-$red-2: rgb(163, 12, 51);
-$night: rgb(45, 54, 83);
-$gray: rgb(242,242,242);
+
+
 
 // Links
-$link-hover: rgb(163, 12, 51);
+$link-hover: blue;
 $link-pressed: gray;
 
 // Box shadows

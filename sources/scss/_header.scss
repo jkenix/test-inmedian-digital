@@ -7,15 +7,14 @@
     &__inner {
         padding: 0px 28px;
 
-        @media (max-width: $md) {
-        }
-
-        @media (max-width: $sm) {
+        @media (max-width: $lg) {
+            padding: 0;
         }
     }
 
     &__languages {
         @include column;
+        flex-wrap: wrap;
 
         background: rgb(206, 222, 243);
 
@@ -26,6 +25,18 @@
 
         padding-top: 49px;
         padding-bottom: 11px;
+
+        @media (max-width: $sm) {
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 15px;
+
+            padding: 20px;
+
+            width: max-content;
+
+            margin-left: auto;
+        }
     }
 
     &__language-switcher {
@@ -38,15 +49,21 @@
             width: inherit;
             height: inherit;
         }
+
+        @media (max-width: $lg) {
+            width: 35px;
+            height: 30px;
+        }
+
+        @media (max-width: $sm) {
+            width: 40px;
+        }
     }
 
     &__content {
         display: flex;
 
         row-gap: 20px;
-
-        @media (max-width: $md) {
-        }
 
         @media (max-width: $sm) {
             flex-direction: column;
@@ -58,15 +75,23 @@
         background-color: rgb(217, 217, 217);
     }
 
+    &__menu {
+        margin: 0 75px;
+
+        @media (max-width: $sm) {
+            margin: 15px 0 0;
+        }
+    }
+
     &__menu-list {
+        align-items: center;
         display: flex;
         flex-wrap: wrap;
 
-        gap: 20px;
+        gap: 40px;
 
         @media (max-width: $lg) {
             gap: 15px;
-            justify-content: center;
         }
 
         @media (max-width: $md) {
@@ -79,20 +104,22 @@
         }
     }
 
+    &__menu-item {
+        align-items: end;
+        display: flex;
+        min-height: 35px;
+    }
+
     &__menu-link {
-        color: $dark;
+        color: $dark-2;
 
-        font-size: 1.125rem;
-        font-weight: 600;
-        line-height: 20px;
+        font-weight: 500;
+        font-size: 0.938rem;
+        line-height: 18px;
+        letter-spacing: 1px;
 
-        @media (max-width: $lg) {
-            font-size: 1rem;
-        }
-
-        @media (max-width: $sm) {
-            font-size: 0.875rem;
-            line-height: 16px;
-        }
+        white-space: pre-line;
+        max-height: 100px;
+        overflow: auto;
     }
 }

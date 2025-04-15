@@ -13,17 +13,14 @@ $url = $_SERVER['HTTP_HOST'];
 if (!error_get_last()) {
 
     // Переменные, которые отправляет пользователь
-    $name = $_POST['name'];
-    // $email = $_POST['email'];
-    // $text = $_POST['text'];
-    // $file = $_FILES['myfile'];
+    $phone = $_POST['phone'];
 
     // Формирование самого письма
-    $title = "Форма обратной связи с $url";
+    $title = "Заявка с формы обратной связи [$url]";
     $body = "
-    <h2>Новое письмо</h2>
-    $name<br>
-    <p style='margin-top: 50px;'>Отправлено с $url</p>
+    <h2>Отправлен номер телефона для консультации:</h2>
+    <a href='tel:$phone' style='font-size: 1rem'>$phone</a><br>
+    <p style='color: gray; font-size: 0.9rem; font-weight: 600; margin-top: 30px; '>Письмо отправлено с сайта <strong>$url</strong></p>
     ";
 
     // Настройки PHPMailer
@@ -32,7 +29,7 @@ if (!error_get_last()) {
     $mail->isSMTP();
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
-    // $mail->SMTPDebug = 2;
+    // $mail->SMTPDebug = 2; // Debug
     $mail->Debugoutput = function ($str, $level) {
         $GLOBALS['data']['debug'][] = $str;
     };
@@ -47,7 +44,7 @@ if (!error_get_last()) {
 
     // Получатель письма
     $mail->addAddress('jkenixx@gmail.com');
-    // $mail->addAddress('hofuxxx@gmail.com'); // Ещё один, если нужен
+    // $mail->addAddress('noname@gmail.com'); // Ещё один, если нужен
 
     // Прикрипление файлов к письму
     if (!empty($file['name'][0])) {

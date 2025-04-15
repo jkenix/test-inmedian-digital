@@ -1,0 +1,204 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.offer {
+    &__content {
+        display: flex;
+
+        margin-top: 22px;
+
+        @media (min-width: $xxl) {
+            max-width: 1199px;
+        }
+    }
+
+    // Desc
+    &__present {
+        @include column;
+
+        width: 100%;
+        max-width: 489px;
+        padding-top: 165px;
+        padding-left: 22px;
+
+        @media (min-width: $xxl) {
+            padding-left: 17px;
+        }
+
+        @media (max-width: $lg) {
+            max-width: 100%;
+
+            padding-top: 50px;
+            padding-left: 0;
+        }
+    }
+
+    &__title {
+        font-size: 2.98rem;
+        font-weight: 600;
+        line-height: 48px;
+        letter-spacing: 1.4px;
+
+        @media (max-width: $lg) {
+            font-size: 2rem;
+        }
+
+        @media (max-width: $sm) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__desc {
+
+        color: $dark;
+
+        font-size: 1.188rem;
+        font-weight: 300;
+        line-height: 25px;
+
+        margin-top: 25px;
+
+        @media (max-width: $lg) {
+            font-size: 1rem;
+        }
+    }
+
+    &__desc-spec {
+        color: $night;
+        font-weight: 600;
+    }
+
+    // Form
+    &__form {
+        @include column;
+
+        margin-top: 25px;
+        margin-bottom: 25px;
+
+        @media (max-width: $lg) {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__input {
+        border-radius: 30px;
+        background-color: $white;
+
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+        max-width: 342px;
+        min-height: 63px;
+
+        padding: 0px 38px;
+
+        font-size: 1.063rem;
+        line-height: 21px;
+
+        @media (max-width: $lg) {
+            font-size: 1rem;
+        }
+    }
+
+    &__placeholder {
+        &::placeholder {
+            color: $dark-3;
+        }
+
+        border: none;
+
+        position: absolute;
+        pointer-events: none;
+    }
+
+    &__number {
+        color: $dark-3;
+
+        &::placeholder {
+            color: $dark-3;
+        }
+
+        &[type="tel"] {
+            opacity: 0;
+            z-index: 5;
+            position: relative;
+        }
+
+        &--is-visible {
+            &[type="tel"] {
+                opacity: 1;
+            }
+        }
+    }
+
+    //    Person
+    &__person {
+        position: relative;
+        display: flex;
+        width: 100%;
+
+        @media (max-width: $xl) {
+            align-items: end;
+            bottom: -4px;
+        }
+
+        @media (max-width: $lg) {
+            display: none;
+        }
+    }
+
+    &__img {
+        margin-left: 6px;
+    }
+
+    &__person-desc {
+        display: flex;
+        gap: 8px;
+
+        position: absolute;
+
+        right: 52px;
+        top: 191px;
+
+        @media (max-width: $xl) {
+            right: 0;
+            top: 0;
+        }
+    }
+
+    &__person-circle {
+        background-color: $blue;
+        width: 7px;
+        height: 7px;
+        border-radius: 30px;
+
+        margin-top: 5px;
+    }
+
+    &__person-info {
+        @include column;
+    }
+
+    &__person-name {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 17px;
+        letter-spacing: 0.08px;
+    }
+
+    &__person-spec {
+        margin-top: 4px;
+    }
+
+    &__person-spec,
+    &__person-job {
+        max-width: 139px;
+
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 15px;
+        text-align: left;
+    }
+}

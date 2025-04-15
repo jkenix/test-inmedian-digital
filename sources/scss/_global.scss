@@ -4,7 +4,7 @@
 // Layout
 
 html {
-    font-size: 2rem;
+    font-size: 1rem;
     scroll-behavior: smooth;
 
     line-height: 1.15;
@@ -37,7 +37,6 @@ body {
 
     width: 100%;
     height: 100%;
-    height: 805px;
 }
 
 .container {
@@ -70,10 +69,8 @@ body {
     }
 
     @media (max-width: $sm) {
-        margin: 0 15px;
+        margin: 0 20px;
         max-width: 100%;
-
-        width: auto;
     }
 }
 
@@ -107,21 +104,6 @@ body {
 form {
     position: relative;
     z-index: 10;
-}
-
-// Text
-.section-title {
-    font-size: 3.5rem;
-    font-weight: 600;
-    line-height: 100%;
-
-    text-align: center;
-
-    @media (max-width: $lg) {
-        font-size: 1.75rem;
-        font-weight: 600;
-        line-height: 120%;
-    }
 }
 
 // Tags
@@ -176,46 +158,61 @@ ul {
     }
 }
 
-// button,
-// input,
-// select,
-// optgroup,
-// textarea {
-//   font-family: $main-font;
-//   margin: 0;
-//   font-size: 100%;
-//   line-height: 1.15;
+button,
+input,
+select,
+optgroup,
+textarea {
+    font-family: $main-font;
+    font-size: 100%;
+    line-height: 1.15;
 
-//   overflow: visible;
+    padding: 0;
+    margin: 0;
+    border: 0;
 
-//   &:focus-visible {
-//     outline: 1px solid $dark;
-//   }
-// }
+    overflow: visible;
 
-// button,
-// select {
-//   text-transform: none;
-// }
+    &:focus-visible {
+        outline: 2px solid $dark;
+    }
+}
 
-// select,
-// input {
-//   outline: none;
-// }
+button,
+select {
+    text-transform: none;
+}
 
-// button,
-// html input[type="button"],
-// input[type="reset"],
-// input[type="submit"] {
-//   cursor: pointer;
-// }
+input {
+    box-sizing: border-box;
+}
 
-// button,
-// [type="button"],
-// [type="reset"],
-// [type="submit"] {
-//   appearance: button;
-// }
+input:user-invalid {
+    outline: 2px solid $red;
+}
+
+input:user-valid {
+    outline: 2px solid green;
+}
+
+select,
+input {
+    outline: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    appearance: button;
+}
 
 hr,
 img {
@@ -226,6 +223,7 @@ img {
 a {
     background-color: transparent;
 
+    font-weight: 400;
     font-family: $main-font;
     text-decoration: none;
     color: $dark;
