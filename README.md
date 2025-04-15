@@ -14,13 +14,16 @@
 ---
 
 Механизм отправки настраивается в файле **send.php**.   
-Пароль почты берется из "Пароля приложения" Google аккаунта [можно задать здесь](https://myaccount.google.com/u/2/apppasswords?roistat_visit=1659506&rapt=AEjHL4P7U_5-hsFqwJGbXV0QObfu-VHNLBbTtR0Xc0gsisxPVokSdz7V5IfWLSNxDEwoYxlCrPf_YAAqmTyCQf3bSo3bYbagDdHo0KYPgkTofddztyrK-N8).
+Пароль почты берется из "Пароля приложения" Google аккаунта. [Можно задать здесь](https://myaccount.google.com/u/2/apppasswords?roistat_visit=1659506&rapt=AEjHL4P7U_5-hsFqwJGbXV0QObfu-VHNLBbTtR0Xc0gsisxPVokSdz7V5IfWLSNxDEwoYxlCrPf_YAAqmTyCQf3bSo3bYbagDdHo0KYPgkTofddztyrK-N8).   
+По умолчанию стоит пароль приложения для моей почты.   
 
 Например:   
+
 ![password mail](/web/password_email.png)   
 
 Получатель письма указывается в виде: ***$mail->addAddress('jkenixx@gmail.com');***   
 Можно выбрать несколько получателей.   
 
 Приходящее письмо:   
+
 ![password mail](/web/email.png)   
